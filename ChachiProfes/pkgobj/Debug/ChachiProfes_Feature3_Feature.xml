@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="fcadc0da-be63-4e56-a125-0e038b97207c" Scope="Web" Title="ChachiProfes Feature3" Version="1.0.0.0">
+  <ElementManifests>
+    <ElementManifest Location="ProfesoresList\Elements.xml" />
+    <ElementFile Location="ProfesoresList\Schema.xml" />
+    <ElementManifest Location="ProfesoresListInstance\Elements.xml" />
+  </ElementManifests>
+  <UpgradeActions>
+    <VersionRange>
+      <ApplyElementManifests>
+        <ElementManifest Location="ProfesoresList\Elements.xml" />
+        <ElementManifest Location="ProfesoresListInstance\Elements.xml" />
+      </ApplyElementManifests>
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

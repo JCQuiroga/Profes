@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="ProfesoresList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/ProfesoresList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100CC764931DB944BB5A51AEBF841581DB1" Name="ProfesoresCT" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0"><FieldRefs><FieldRef ID="{37b0a9f8-7cab-4376-b84e-a5a607c642a3}" DisplayName="Profesor" Required="TRUE" Name="Profesor" /><FieldRef ID="{1af3e1ae-13a1-403b-84e2-2a230e07f16f}" DisplayName="Valoracion" Required="TRUE" Name="Valoracion" /><FieldRef ID="{417762eb-e0f3-439c-8bc7-ab1a9b001797}" DisplayName="Conocimientos" Required="TRUE" Name="Conocimientos" /></FieldRefs></ContentType></ContentTypes>
+    <Fields>
+      
+    <Field ID="{37b0a9f8-7cab-4376-b84e-a5a607c642a3}" Name="Profesor" DisplayName="Profesor" Type="Text" Required="TRUE" Group="Custom Site Columns"></Field><Field ID="{1af3e1ae-13a1-403b-84e2-2a230e07f16f}" Name="Valoracion" DisplayName="Valoracion" Type="Number" Required="TRUE" Group="Custom Site Columns"></Field><Field ID="{417762eb-e0f3-439c-8bc7-ab1a9b001797}" Name="Conocimientos" DisplayName="Conocimientos" Type="Lookup" List="Lists/ConocimientosList" Required="TRUE" Group="Custom Site Columns"></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="Profesor" /><FieldRef Name="Valoracion" /><FieldRef Name="Conocimientos" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

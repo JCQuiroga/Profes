@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="SharePoint Add-in Feature" Id="b8bea64a-278b-49ae-98e2-1cf1cbc00e69" Scope="Web" Title="ChachiProfes Feature1" Version="1.0.0.0">
+  <ElementManifests>
+    <ElementManifest Location="Pages\Elements.xml" />
+    <ElementFile Location="Pages\Default.aspx" />
+    <ElementFile Location="Pages\Prueba.aspx" />
+    <ElementManifest Location="Scripts\Elements.xml" />
+    <ElementFile Location="Scripts\App.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.min.map" />
+    <ElementFile Location="Scripts\jquery-1.9.1.min.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.intellisense.js" />
+    <ElementFile Location="Scripts\Schema.xml" />
+    <ElementManifest Location="Content\Elements.xml" />
+    <ElementFile Location="Content\App.css" />
+    <ElementManifest Location="Images\Elements.xml" />
+    <ElementFile Location="Images\AppIcon.png" />
+    <ElementManifest Location="Profesor\Elements.xml" />
+    <ElementManifest Location="Valoracion\Elements.xml" />
+    <ElementManifest Location="Conocimientos\Elements.xml" />
+    <ElementManifest Location="ProfesoresCT\Elements.xml" />
+    <ElementManifest Location="Habilidad\Elements.xml" />
+    <ElementManifest Location="ConocimientosCT\Elements.xml" />
+  </ElementManifests>
+  <UpgradeActions>
+    <VersionRange>
+      <ApplyElementManifests>
+        <ElementManifest Location="Pages\Elements.xml" />
+        <ElementManifest Location="Scripts\Elements.xml" />
+        <ElementManifest Location="Content\Elements.xml" />
+        <ElementManifest Location="Images\Elements.xml" />
+        <ElementManifest Location="Profesor\Elements.xml" />
+        <ElementManifest Location="Valoracion\Elements.xml" />
+        <ElementManifest Location="Conocimientos\Elements.xml" />
+        <ElementManifest Location="ProfesoresCT\Elements.xml" />
+        <ElementManifest Location="Habilidad\Elements.xml" />
+        <ElementManifest Location="ConocimientosCT\Elements.xml" />
+      </ApplyElementManifests>
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

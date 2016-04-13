@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="ConocimientosList" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/ConocimientosList" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Habilidad">Calceta avanzada</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">C#</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">C++</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">Java</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">JavaScript</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">Angular</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">Inglés</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">Francés</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">Mecanografía avanzada</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">Darwinismo Creacionista</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">Heliocentrismo vs Geocentrismo</Field>
+        </Row>
+        <Row>
+          <Field Name="Habilidad">Futbolín</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

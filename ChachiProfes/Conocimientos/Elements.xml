@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{417762eb-e0f3-439c-8bc7-ab1a9b001797}"
+       Name="Conocimientos"
+       DisplayName="Conocimientos"
+       Type="Lookup"
+       List="Lists/ConocimientosList"
+       Required="TRUE"
+       Group="Custom Site Columns">
+  </Field>
+</Elements>

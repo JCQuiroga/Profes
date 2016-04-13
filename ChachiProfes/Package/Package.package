@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="4bc18ec2-6fe6-442c-8bdd-cd82e107ddbb" solutionId="4bc18ec2-6fe6-442c-8bdd-cd82e107ddbb" resetWebServer="false" sharePointProductVersion="16.0" name="ChachiProfes" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="b8bea64a-278b-49ae-98e2-1cf1cbc00e69" />
+    <featureReference itemId="60811f6d-6cae-4914-bc77-36dcb7a2389d" />
+    <featureReference itemId="bca0b10c-c48e-4d36-bc30-61d839983d5a" />
+  </features>
+</package>

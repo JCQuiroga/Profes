@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="4bc18ec2-6fe6-442c-8bdd-cd82e107ddbb" SharePointProductVersion="16.0">
+  <FeatureManifests>
+    <FeatureManifest Location="ChachiProfes_Feature1\Feature.xml" />
+    <FeatureManifest Location="ChachiProfes_Feature2\Feature.xml" />
+    <FeatureManifest Location="ChachiProfes_Feature3\Feature.xml" />
+  </FeatureManifests>
+</Solution>

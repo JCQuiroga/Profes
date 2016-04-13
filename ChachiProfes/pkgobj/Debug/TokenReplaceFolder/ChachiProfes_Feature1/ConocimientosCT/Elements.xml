@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Elemento (0x01) -->
+  <ContentType ID="0x0100B43126CBE0694DFDAE81228257AE0D16" Name="ConocimientosCT" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{117a6bc6-9ae7-433f-a756-76208a070f8d}" DisplayName="Habilidad" Required="TRUE" Name="Habilidad" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

@@ -1,0 +1,3 @@
+C:\Users\ericame\documents\visual studio 2015\Projects\ChachiProfes\ChachiProfes\bin\Debug\ChachiProfes.pdb
+C:\Users\ericame\documents\visual studio 2015\Projects\ChachiProfes\ChachiProfes\obj\Debug\ChachiProfes.dll
+C:\Users\ericame\documents\visual studio 2015\Projects\ChachiProfes\ChachiProfes\obj\Debug\ChachiProfes.pdb
