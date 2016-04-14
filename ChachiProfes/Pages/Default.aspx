@@ -21,7 +21,7 @@
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    CHACHI Profes
+   Gestión de Valoraciones y Profesores
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
@@ -31,15 +31,16 @@
         <table id="Hab"></table>
     </div>
     
-    <div>
+    <div class="bottom">
         <table id="Prof" ></table>
     </div>
     
-    <div>
+    <div class="bottom">
         <table id="tabdin"></table>
     
-        <button type="button" onclick="getListConocimientos()"> BUSCAR CONOC</button>
-        <button type="button" onclick="getListProfesores()"> BUSCAR PROF </button>
+        <button type="button" onclick="getListConocimientos()"> Buscar Conocimientos</button>
+        <button type="button" onclick="chapu()"> Valoracion Profesores</button>
+        <button type="button" onclick="limpiar()"> Limpiar </button>
     </div>
        
 </asp:Content>
