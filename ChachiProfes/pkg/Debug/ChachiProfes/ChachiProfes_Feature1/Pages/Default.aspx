@@ -37,6 +37,9 @@
     
     <div>
         <table id="tabdin"></table>
+    
+        <button type="button" onclick="getListConocimientos()"> BUSCAR CONOC</button>
+        <button type="button" onclick="getListProfesores()"> BUSCAR PROF </button>
     </div>
-
+       
 </asp:Content>

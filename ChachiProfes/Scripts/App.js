@@ -18,59 +18,86 @@ function getQueryStringParams(sParam) {
 function getListConocimientos() {
 
     var lista = hostWebContext.get_web().get_lists().getByTitle("Conocimientos");
-    // var lista = currentContext.get_web().get_lists().getByTitle("ConocimientosList");
     var query = new SP.CamlQuery();
-    // query.set_viewXml("<Query> <OrderBy> <FieldRef Name='Habilidad'/> </OrderBy></Query>");
     list = lista.getItems(query);
     currentContext.load(list);
     currentContext.executeQueryAsync(Function.createDelegate(this, onSuccessCon), Function.createDelegate(this, onFail));
 }
-
-function getListProfesores() {
-
-    var lista = hostWebContext.get_web().get_lists().getByTitle("Profesores");
-    var query = new SP.CamlQuery();
-    query.set_viewXml("<Query> <OrderBy> <FieldRef Name='Valoraciones'/> </OrderBy></Query>");
-    list = lista.getItems(query);
-    currentContext.load(list);
-    currentContext.executeQueryAsync(Function.createDelegate(this, onSuccessProf), Function.createDelegate(this, onFail));
-}
-
-function onFail(sender, args) {
-    alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
-}
-
 function onSuccessCon() {
 
     if (list.get_count() != 0) {
 
         var listEnum = list.getEnumerator();
         var tabla = $("#Hab");
+        var html = "";
         while (listEnum.moveNext()) {
-            var html = "<tr>";
+            
             var actual = listEnum.get_current();
             var habilidad = actual.get_item("Title");
             html += "<td><button type='button' onclick='buscar(\"" + habilidad + "\")' >" + habilidad + "</button></td>";
-            tabla.append(html);
+            
         }
-
+        tabla.html(html);
     }
 }
 
-function onSuccessProf() {
+function buscar(habilidad) {
+    var tabla = $("#tabdin");
+    var html = "<tr>";
+    html += "<td>" + habilidad + "</td></tr>";
+    tabla.html(html);
 
+}
+
+function onFail(sender, args) {
+    alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
+}
+
+function getListProfesores() {
+
+    var lista = hostWebContext.get_web().get_lists().getByTitle("Profesores");
+    var query = new SP.CamlQuery();
+    query.set_viewXml(
+        "<Query><Where><Eq><FieldRef Name=\"Title\"/><Value Type=\"Text\">Doraemon</Value></Eq></Where></Query>"
+        );
+    list = lista.getItems(query);
+    currentContext.load(list);
+    currentContext.executeQueryAsync(Function.createDelegate(this, onSuccessProf), Function.createDelegate(this, onFail));
+}
+
+
+function onSuccessProf() {
     if (list.get_count() != 0) {
 
         var listEnum = list.getEnumerator();
         var tabla = $("#Prof");
+        var html = "<tr><th>PROFESOR</th><th>VALORACIONES</th></tr>";
         while (listEnum.moveNext()) {
-            var html = "<tr><td><p>PROFESOR</td><td>VALORACIONES</p></td></tr>";
             var actual = listEnum.get_current();
-            html += "<tr><td><p>" + actual.get_item("Profesor") + "</td><td>" + actual.get_item("Valoraciones") + "</p></td></tr>";
-            tabla.append(html);
-        }
+            var prof = actual.get_item("Title");
+            var valor = actual.get_item("Valoraciones");
+            html += "<tr><td>" + prof + "</td><td>" + valor + "</td></tr>";
+            
+           }
+        tabla.html(html);
     }
 }
+
+
+//if (list.get_count() != 0) {
+
+//    var listEnum = list.getEnumerator();
+//    var tabla = $("#Prof");
+//    var html = "<th><td>PROFESOR</td><td>VALORACIONES</td></th>";
+//    while (listEnum.moveNext()) {
+
+//        var actual = listEnum.get_current();
+//        html += "<tr><td>" + actual.get_item("Title") + "</td><td>" + actual.get_item("Valoraciones") + "</td></tr>";
+
+//    }
+//    tabla.html(html);
+//}
+
 
 function init() {
     var hostUrl = decodeURIComponent(getQueryStringParams("SPHostUrl"));
@@ -78,20 +105,11 @@ function init() {
     hostWebContext = new SP.AppContextSite(currentContext, hostUrl);
     web = hostWebContext.get_web();
     var id = getQueryStringParams("SPListItemId");
-    getListConocimientos();
-    getListProfesores();
-
 }
 
 
-function buscar(habilidad) {
-    var tabla = $("#tabdin");
-    var html = "<tr>";
-    html += "<td>" + habilidad + "</td></tr>";
-    tabla.html(html);
-}
+
 
 $(document).ready(function () {
     ExecuteOrDelayUntilScriptLoaded(init, "sp.js");
-    
 });
